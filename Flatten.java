@@ -18,13 +18,13 @@ class TreeNode {
 }
 
 class Solution {
-    public void solve(TreeNode root) {
+    public void flatten(TreeNode root) {
         if (root == null) {
             return;
         }
 
-        solve(root.left);
-        solve(root.right);
+        flatten(root.left);
+        flatten(root.right);
 
         TreeNode leftSubtree = root.left;
         TreeNode rightSubtree = root.right;
